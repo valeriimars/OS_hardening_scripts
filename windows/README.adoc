@@ -1,0 +1,5 @@
+# Set Of hardening scripts for Windows
+Unlike Linux set of scripts, Windows doesn't have a single entry point script. Instead here's a collection of them to be used as judged by the admin.
+
+#### Source: https://www.ghacks.net/2015/08/14/comparison-of-windows-10-privacy-tools/
+
