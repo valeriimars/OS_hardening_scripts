@@ -1,0 +1,126 @@
+[] Enable ufw
+Firewall is active and enabled on system startup
+Rule added
+[1] Disable misc network protocols
+[2] Disable misc file systems
+[3] Disable misc kernel modules
+[4] Systemd/system.conf and Systemd/user.conf
+[5] Systemd/resolved.conf
+[6] Systemd/logind.conf
+[7] Systemd/journald.conf and logrotate.conf
+[8] Systemd/timesyncd.conf
+au.kashra.pictures has latency < 50
+white.web-ster.com has latency < 50
+clock.xmission.com has latency < 50
+voipmonitor.wci.com has latency < 50
+[9] /etc/fstab, system/tmp.mount and system/var-tmp.mount
+[10] Prelink
+[11] Updating the package index files from their sources
+./scripts/10_aptget: line 4: update: command not found
+[12] Upgrading installed packages
+./scripts/10_aptget: line 10: upgrade: command not found
+[13] /etc/hosts.allow and /etc/hosts.deny
+[14] /etc/issue
+[15] /etc/login.defs
+[16] /etc/sysctl.conf
+[1] /etc/security/limits.conf
+[2] /etc/adduser.conf and /etc/default/useradd
+[3] root access
+[4] Installing base packages
+	Product Name: VirtualBox
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+install: unrecognized option '--no-install-recommends'
+Try 'install --help' for more information.
+[5] Postfix
+./scripts/38_postfix: line 4: postconf: command not found
+Failed to restart postfix.service: Unit postfix.service not found.
+[6] disable apport
+Created symlink from /etc/systemd/system/apport.service to /dev/null.
+[7] Enable rkhunter
+sed: can't read /etc/default/rkhunter: No such file or directory
+sed: can't read /etc/default/rkhunter: No such file or directory
+./scripts/33_rkhunter: line 7: rkhunter: command not found
+[8] /etc/ssh/sshd_config
+cp: cannot stat '/etc/ssh/sshd_config': No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+sed: can't read /etc/ssh/sshd_config: No such file or directory
+Failed to restart sshd.service: Unit sshd.service not found.
+[9] /etc/pam.d/common-password, /etc/pam.d/common-auth and /etc/pam.d/login
+[10] /etc/cron and /etc/at
+Created symlink from /etc/systemd/system/atd.service to /dev/null.
+[11] Ctrl-alt-delete
+Created symlink from /etc/systemd/system/ctrl-alt-del.target to /dev/null.
+[12] Auditd
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+cp: cannot create regular file '/etc/audit/audit.rules': No such file or directory
+sed: can't read /etc/audit/audit.rules: No such file or directory
+cp: cannot stat '/etc/audit/audit.rules': No such file or directory
+Failed to execute operation: No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+[13] Aide
+sed: can't read /etc/aide/aide.conf: No such file or directory
+[14] .rhosts
+[15] Remove users
+[16] lock root account
+[17] Removing unused packages
+./scripts/10_aptget: line 18: clean: command not found
+./scripts/10_aptget: line 19: autoclean: command not found
+(Reading database ... 176226 files and directories currently installed.)
+Removing snap-confine (2.25) ...
+[18] Remove suid bits
+[19] umask
+[20] Modifying paths
+[21] Enforce apparmor profiles
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+find: ‘aa-enforce’: No such file or directory
+./scripts/29_apparmor: line 5: aa-complain: command not found
+[22] Running Aide, this will take a while
+./scripts/24_aide: line 12: aideinit: command not found
+cp: cannot stat '/var/lib/aide/aide.db.new': No such file or directory
+[23] Enable daily Aide check
+Created symlink from /etc/systemd/system/multi-user.target.wants/aidecheck.timer to /etc/systemd/system/aidecheck.timer.
