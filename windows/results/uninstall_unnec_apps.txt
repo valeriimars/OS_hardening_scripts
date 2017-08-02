@@ -1,0 +1,2 @@
+
+C:\Users\thris\OS_hardening_scripts\windows>PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File ""C:\Users\thris\OS_hardening_scripts\windows\\z3.ps1""' -Verb RunAs}" 

@@ -1,0 +1,29 @@
+C:\Users\thris\OS_hardening_scripts\windows_test>"Win 10 Disable Cortana Completely.bat"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>NET FILE  1>NUL 2>NUL
+
+C:\Users\thris\OS_hardening_scripts\windows_test>if '2' == '0' (goto gotPrivileges  )  else (goto getPrivileges  )
+
+C:\Users\thris\OS_hardening_scripts\windows_test>if '' == 'ELEV' (echo ELEV   & shift /1   & goto gotPrivileges )
+
+C:\Users\thris\OS_hardening_scripts\windows_test>setlocal DisableDelayedExpansion
+
+C:\Users\thris\OS_hardening_scripts\windows_test>set "batchPath=Win 10 Disable Cortana Completely.bat"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>setlocal EnableDelayedExpansion
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO Set UAC = CreateObject("Shell.Application")  1>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO args = "ELEV "  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO For Each strArg in WScript.Arguments  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO args = args & strArg & " "   1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO Next  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>ECHO UAC.ShellExecute "!batchPath!", args, "", "runas", 1  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>"C:\Windows\System32\WScript.exe" "C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"
+
+C:\Users\thris\OS_hardening_scripts\windows_test>exit /B
