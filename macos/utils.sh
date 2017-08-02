@@ -1,2 +1,0 @@
-# Everything else 
-# !/bin/bash
