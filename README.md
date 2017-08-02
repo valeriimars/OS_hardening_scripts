@@ -6,7 +6,4 @@ Linux hardening set of scripts. Using https://github.com/konstruktoid/hardening 
 
 
 ## Windows
-.. to implement
-
-## Mac OS
-.. to implement
+Scripts source: https://www.ghacks.net/2015/08/14/comparison-of-windows-10-privacy-tools/
