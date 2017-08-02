@@ -1,0 +1,28 @@
+
+C:\Users\thris\OS_hardening_scripts\windows>NET FILE  1>NUL 2>NUL 
+
+C:\Users\thris\OS_hardening_scripts\windows>if '2' == '0' (goto gotPrivileges  )  else (goto getPrivileges  ) 
+
+C:\Users\thris\OS_hardening_scripts\windows>if '' == 'ELEV' (echo ELEV   & shift /1   & goto gotPrivileges ) 
+
+C:\Users\thris\OS_hardening_scripts\windows>setlocal DisableDelayedExpansion 
+
+C:\Users\thris\OS_hardening_scripts\windows>set "batchPath=Win 10 Enable Secure Microsoft Edge Settings.bat" 
+
+C:\Users\thris\OS_hardening_scripts\windows>setlocal EnableDelayedExpansion 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO Set UAC = CreateObject("Shell.Application")  1>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO args = "ELEV "  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO For Each strArg in WScript.Arguments  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO args = args & strArg & " "   1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO Next  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>ECHO UAC.ShellExecute "!batchPath!", args, "", "runas", 1  1>>"C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs" 
+
+C:\Users\thris\OS_hardening_scripts\windows>"C:\Windows\System32\WScript.exe" "C:\Users\thris\AppData\Local\Temp\OEgetPrivileges.vbs"  
+
+C:\Users\thris\OS_hardening_scripts\windows>exit /B 
